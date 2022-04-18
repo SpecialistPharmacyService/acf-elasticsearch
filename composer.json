@@ -3,8 +3,20 @@
   "description": "Integrate wordpress and advanced custom fields with elasticsearch.",
   "repositories": [
     {
-      "type": "git",
-      "url": "https://bitbucket.org/makeandship/logging-php.git"
+      "type": "package",
+      "package": {
+        "name": "specialistpharmacyservice/logging-php",
+        "version": "v1.0.1",
+        "type": "library",
+        "source": {
+          "url": "https://github.com/SpecialistPharmacyService/logging-php.git",
+          "type": "git",
+          "reference": "v1.0.1"
+        },
+        "require": {
+          "composer/installers": "^2.0"
+        }
+      }
     }
   ],
   "require": {
@@ -14,7 +26,7 @@
     "ruflin/elastica": "^7.1.0",
     "php-http/httplug": "^1.1.0",
     "monolog/monolog": "^1.21.0",
-    "makeandship/logging-php": "v1.0.1"
+    "specialistpharmacyservice/logging-php": "v1.0.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^9"
@@ -26,5 +38,10 @@
     }
   ],
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
 }
